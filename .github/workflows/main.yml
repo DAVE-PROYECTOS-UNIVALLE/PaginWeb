@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: "14.x"
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
