@@ -20,7 +20,7 @@ jobs:
                 ssh -o StrictHostKeyChecking=no ubuntu@44.214.96.162 << 'EOF'
                 cd /var/www/html
                 # Eliminar todos los archivos y carpetas
-                rm -rf *
+                sudo rm -rf *
                 # Verificar si es un repositorio git; si no, clonar
                 if [ ! -d .git ]; then
                     git clone https://github.com/DAVE-PROYECTOS-UNIVALLE/PaginWeb.git .  # Clona el repositorio en el directorio actual
