@@ -21,10 +21,6 @@ jobs:
                 cd /var/www/html
                 # Eliminar todos los archivos y carpetas
                 sudo rm -rf *
-                # Verificar si es un repositorio git; si no, clonar
-                if [ ! -d .git ]; then
-                    git clone https://github.com/DAVE-PROYECTOS-UNIVALLE/PaginWeb.git .  # Clona el repositorio en el directorio actual
-                fi
-                git pull origin main
+                git clone <URL_DEL_REPOSITORIO> .
                 # Comandos para reiniciar el servidor o mover archivos si es necesario
                 EOF
