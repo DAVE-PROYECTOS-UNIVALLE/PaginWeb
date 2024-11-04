@@ -19,6 +19,10 @@ jobs:
               run: |
                 ssh -o StrictHostKeyChecking=no ubuntu@44.214.96.162 << 'EOF'
                 cd /var/www/html
+                # Verificar si es un repositorio git; si no, clonar
+                if [ ! -d .git ]; then
+                    git clone https://github.com/DAVE-PROYECTOS-UNIVALLE/PaginWeb.git .  # Clona el repositorio en el directorio actual
+                fi
                 git pull origin main
                 # Comandos para reiniciar el servidor o mover archivos si es necesario
                 EOF
