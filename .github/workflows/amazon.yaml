@@ -21,6 +21,6 @@ jobs:
                 cd /var/www/html
                 # Eliminar todos los archivos y carpetas
                 sudo rm -rf *
-                git clone <URL_DEL_REPOSITORIO> .
+                git clone https://github.com/DAVE-PROYECTOS-UNIVALLE/PaginWeb.git .
                 # Comandos para reiniciar el servidor o mover archivos si es necesario
                 EOF
