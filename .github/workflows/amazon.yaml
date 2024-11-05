@@ -20,6 +20,6 @@ jobs:
                 ssh -o StrictHostKeyChecking=no ubuntu@44.214.96.162 << 'EOF'
                 cd /var/www/html
                 sudo rm -rf *
-                git pull origin main .
+                git pull origin main
                 #fin
                 EOF
