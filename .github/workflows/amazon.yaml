@@ -20,6 +20,11 @@ jobs:
                 ssh -o StrictHostKeyChecking=no ubuntu@44.214.96.162 << 'EOF'
                 cd /var/www/html
                 sudo rm -rf *
-                git pull origin main
-                #fin
+                if [ -d ".git" ]; then
+                    # Si es un repositorio git, hacer pull
+                    git pull origin main
+                else
+                    # Si no existe, clonar el repositorio
+                    git clone https://github.com/DAVE-PROYECTOS-UNIVALLE/PaginWeb.git .
+                fi
                 EOF
