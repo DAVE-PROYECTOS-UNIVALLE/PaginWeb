@@ -19,7 +19,7 @@ jobs:
               run: |
                 ssh -o StrictHostKeyChecking=no ubuntu@44.214.96.162 << 'EOF'
                 cd /var/www/html
-                sudo rm -rf *
+                # sudo rm -rf *
                 git clone https://github.com/DAVE-PROYECTOS-UNIVALLE/PaginWeb.git .
                 #fin
                 EOF
