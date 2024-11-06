@@ -17,7 +17,7 @@ jobs:
                 ssh-private-key: ${{secrets.SSH_PRIVATE_KEY}}
             - name: Despliegue en Lightsail
               run: |
-                ssh -o StrictHostKeyChecking=no ubuntu@44.214.96.162 << 'EOF'
+                ssh -o StrictHostKeyChecking=no ubuntu@44.195.26.220 << 'EOF'
                 cd /var/www/html
                 sudo rm -rf *
                 if [ -d ".git" ]; then
